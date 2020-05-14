@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e1da62adb38bc94c8f8a07bb91656af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPieces: 5
   maxPieces: 20
   perlinScaleFactor: 10
   randomVariationMin: 0
