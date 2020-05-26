@@ -47,4 +47,13 @@ public class Car_Control : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collect"))
+        {
+            other.gameObject.SetActive(false);
+
+        }
+    }
 }
