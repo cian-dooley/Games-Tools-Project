@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collect
+  - Teleport
+  - Teleport2
+  - Teleport3
+  - Teleport4
+  - Teleport5
+  - Teleport6
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Car_Control : MonoBehaviour
 {
     public float MotorForce, SteerForce, Brakeforce;
     public WheelCollider FR_L_Wheel, FR_R_Wheel, RE_L_Wheel, RE_R_Wheel;
+    public Text countText;
+    public Text completeText;
+   
+    private int count;
 
     // Start is called before the first frame update
     void Start()
     {
+        count = 0;
+        SetCountText();
+        completeText.text = "";
         
     }
 
@@ -53,7 +61,19 @@ public class Car_Control : MonoBehaviour
         if (other.gameObject.CompareTag("Collect"))
         {
             other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
 
         }
+    }
+    void SetCountText()
+    {
+        countText.text = "count: " + count.ToString();
+        if (count >= 10)
+        {
+            completeText.text = "You Win";
+            
+        }
+       
     }
 }
