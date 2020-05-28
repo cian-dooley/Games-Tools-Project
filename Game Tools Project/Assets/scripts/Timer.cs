@@ -22,7 +22,24 @@ public class Timer : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         timerText.text = currentTime.ToString("0");
 
-       
+
+        if (currentTime <= 180)
+        {
+            
+            timerText.color = Color.green;
+        }
+
+        if (currentTime <= 120)
+        {
+
+            timerText.color = Color.yellow;
+        }
+
+        if (currentTime <= 60)
+        {
+
+            timerText.color = Color.red;
+        }
 
         if (currentTime <= 0)
         {
